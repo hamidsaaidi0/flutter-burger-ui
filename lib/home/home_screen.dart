@@ -1,3 +1,4 @@
+import 'package:burger_app/home/widgets/categories.dart';
 import 'package:burger_app/home/widgets/header.dart';
 import 'package:flutter/material.dart';
 
@@ -29,6 +30,7 @@ class _HambergerState extends State<Hamberger> {
             ],
           ),
           Header(),
+          Categories(),
           SliverList(
             delegate: SliverChildListDelegate([
               Text(
