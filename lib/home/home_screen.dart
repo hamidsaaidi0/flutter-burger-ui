@@ -1,15 +1,16 @@
 import 'package:burger_app/home/widgets/categories.dart';
+import 'package:burger_app/home/widgets/hamburger_list.dart';
 import 'package:burger_app/home/widgets/header.dart';
 import 'package:flutter/material.dart';
 
-class Hamberger extends StatefulWidget {
-  const Hamberger({Key? key}) : super(key: key);
+class Hamburger extends StatefulWidget {
+  const Hamburger({Key? key}) : super(key: key);
 
   @override
-  State<Hamberger> createState() => _HambergerState();
+  State<Hamburger> createState() => _HamburgerState();
 }
 
-class _HambergerState extends State<Hamberger> {
+class _HamburgerState extends State<Hamburger> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,13 +32,11 @@ class _HambergerState extends State<Hamberger> {
           ),
           Header(),
           Categories(),
-          SliverList(
-            delegate: SliverChildListDelegate([
-              Text(
-                'hamberger',
-                style: TextStyle(fontSize: 300),
-              ),
-            ]),
+          Hamburger_list(
+            row: 1,
+          ),
+          Hamburger_list(
+            row: 2,
           ),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:burger_app/home/home_screen.dart';
+import 'package:burger_app/home/widgets/burger_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        primaryColor: Colors.teal,
         appBarTheme: const AppBarTheme(
           color: Colors.teal,
           centerTitle: true,
@@ -24,7 +26,10 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.orange,
         ),
       ),
-      home: Hamberger(),
+      home: Hamburger(),
+      routes: {
+        BurgerPage.tag: (context) => BurgerPage(),
+      },
     );
   }
 }
